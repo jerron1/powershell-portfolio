@@ -1,6 +1,15 @@
 ﻿<#
 # Self-study resolution for team file creation + verification project
 
+# Requirements:
+# 1.  Using the same data set (source), export all details for the following processes to a separate file.
+#		a. Notepad
+#		b. Calculator
+#		c. Charmap
+# 2.  Enhance the 'validation' process to ensure that the file exported is within the "timeframe" of when the script was run.
+#		a. What option(s) can be used to make the validation process more comprehensive?
+# 3.  Adjust the script so that the export file name(s) are unique for each script run.
+#		a. What option(s) could be used to make a file "unique"?
 
 # This script will create a .CSV that exports properties of specific processes to a file with the time & date of the script initialization to the filename.
 # It will also verify if a file with the same name exists & prompt the user to delete that file before continuing or stop the script.
