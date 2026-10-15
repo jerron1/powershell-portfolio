@@ -20,7 +20,7 @@
 
 # Get the current time & format it to append to filename
 $CurrentTime = Get-Date
-$FormattedCurrentTime = Get-Date $CurrentTime -Format "yyyyMMdd_HHmm" # Add ff if you want seconds
+$FormattedCurrentTime = Get-Date $CurrentTime -Format "yyyyMMdd_HHmm" # Add ss if you want seconds
 $FilePath = "C:\ClassFiles-JB\Export\Variable_Export_of_Specific_Processes" + "_" + $FormattedCurrentTime + "_" + ".csv" # First string of $FilePath must be custom to your environment
 
 # Declare a variable that grabs local machine's processes as a source data set (Runs after since I interpret line 1 as start of the script)
@@ -32,7 +32,7 @@ $GetFilteredProcesses = $GetProcess | Where-Object {$_.ProcessName -in $Specific
 
 # Verify whether file exists already, delete if true and create new one
 $TestPathSpecificProcExportCSV = Test-Path -Path $FilePath -PathType Leaf
-# Copilot helped fix do loop to reprompt for initial verification
+# Copilot helped fix infinite do loop; now reprompts for initial verification
 if ($TestPathSpecificProcExportCSV) {
 
     Write-Host "A file already exists and will be deleted. A new file will be made for this script."
